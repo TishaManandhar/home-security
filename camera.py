@@ -19,7 +19,7 @@ boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])
 for (xA, yA, xB, yB) in boxes:
         # display the detected boxes in the colour picture
         cv2.rectangle(gray, (xA, yA), (xB, yB), (0, 255, 0), 2)
-if boxes:
+if len(boxes) > 0:
     print(weights)
     print(boxes)
     print("Person Detected.")
