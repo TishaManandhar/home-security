@@ -1,7 +1,7 @@
 import threading
 import time
 import motion
-
+import buzzer
 
 def looper():
     while True:
@@ -9,6 +9,7 @@ def looper():
         is_motion = motion.motion_detect()
         if is_motion:
             print("motion detected")
+            buzzer.alert()
         else:
             print("motion not detected")
 
