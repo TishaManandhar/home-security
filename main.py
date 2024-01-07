@@ -2,6 +2,7 @@ import threading
 import time
 import motion
 
+
 def looper():
     while True:
         time.sleep(2)
@@ -10,6 +11,7 @@ def looper():
             print("motion detected")
         else:
             print("motion not detected")
+
 
 if __name__ == "__main__":
     t = threading.Thread(target=looper)
