@@ -9,11 +9,11 @@ def looper():
         time.sleep(2)
         is_motion = motion.motion_detect()
         if is_motion:
-            print("motion detected")
             if detector.detect_person():
+                print("motion and person detected.")
                 buzzer.alert()
             else:
-                print("no person detected")
+                print("motion was detected but no person detected.")
         else:
             print("motion not detected")
 
